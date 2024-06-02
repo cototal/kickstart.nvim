@@ -1,5 +1,9 @@
 # kickstart.nvim
 
+## Fork
+
+I made this fork because I don't really understand Neovim/Lazy package management and customization yet. There is definitely a modular way to do this without forking that I should learn.
+
 ## Introduction
 
 A starting point for Neovim that is:
