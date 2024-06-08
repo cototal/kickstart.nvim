@@ -156,7 +156,7 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-vim.keymap.set('n', ';', ':')
+vim.keymap.set({ 'n', 'v' }, ';', ':')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -193,6 +193,12 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+  pattern = '*.tmpl',
+  callback = function()
+    vim.bo.filetype = 'html'
+  end,
+})
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
@@ -576,8 +582,26 @@ require('lazy').setup({
           },
         },
         emmet_language_server = {
-          filetypes = { 'css', 'eruby', 'html', 'javascript', 'javascriptreact', 'less', 'markdown', 'sass', 'scss', 'pug', 'typescriptreact', 'svelte' },
+          filetypes = {
+            'css',
+            'eruby',
+            'html',
+            'javascript',
+            'javascriptreact',
+            'less',
+            'markdown',
+            'sass',
+            'scss',
+            'pug',
+            'typescriptreact',
+            'svelte',
+            'gohtmltmpl',
+            'gohtml',
+            'gotmpl',
+            'tmpl',
+          },
         },
+        tsserver = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
