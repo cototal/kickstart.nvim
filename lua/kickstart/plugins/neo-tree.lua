@@ -16,6 +16,7 @@ return {
   opts = {
     filesystem = {
       window = {
+        width = '20%', -- Width of the NeoTree window
         mappings = {
           ['\\'] = 'close_window',
         },
