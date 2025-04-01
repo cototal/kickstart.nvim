@@ -105,7 +105,7 @@ vim.opt.number = true
 -- vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.opt.mouse = 'ni'
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -627,6 +627,10 @@ require('lazy').setup({
         gopls = {},
         pyright = {},
         rust_analyzer = {},
+        emmet_ls = {},
+        intelephense = {
+          licenceKey = '/home/polyc/.config/intelephense/licence.key',
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
