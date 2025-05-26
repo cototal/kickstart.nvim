@@ -2,4 +2,12 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  {
+    'olexsmir/gopher.nvim',
+    ft = 'go',
+    build = function()
+      vim.cmd.GoInstallDeps()
+    end,
+  },
+}
