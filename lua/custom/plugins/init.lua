@@ -10,10 +10,10 @@ return {
       vim.cmd.GoInstallDeps()
     end,
   },
-  {
-    dir = vim.fn.stdpath 'config' .. '/lua/custom/plugins/opluga',
-    config = function()
-      require('opluga').setup()
-    end,
-  },
+  -- {
+  --   dir = vim.fn.stdpath 'config' .. '/lua/custom/plugins/codegen',
+  --   config = function()
+  --     require('codegen').setup()
+  --   end,
+  -- },
 }
