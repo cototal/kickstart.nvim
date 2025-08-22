@@ -1,0 +1,12 @@
+{
+	"WTForms string field": {
+		"prefix": "sfield",
+		"body": [
+		    "${1} = StringField(\"${2}\", [",
+			"\tvalidators.InputRequired(),",
+			"\tvalidators.Length(max=250)",
+		    "])"
+		],
+		"description": "StringField for WTForms"
+	}
+}
