@@ -1,0 +1,12 @@
+{
+	"Base template": {
+		"prefix": "start",
+		"body": [
+			"{% extends \"base.html\" %}",
+			"{% block title %}",
+			"\t${1:title}",
+			"{% endblock %}"
+		],
+		"description": "Base template for jinja templates"
+	}
+}
